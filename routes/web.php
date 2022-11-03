@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('content');
-});
+Route::get('/', [ViewController::class,'index']);
+
+

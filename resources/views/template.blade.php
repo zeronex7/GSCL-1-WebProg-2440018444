@@ -10,8 +10,21 @@
 </head>
 <body>
         @include('nav')
-        <div  class="m-4">
-            @yield('content')
+        <div  class="p-5 bg-dark text-white " >
+            <h2 class="mb-5 text-center">
+                Website ini akan generate Tree Pattern dengan baris berjumlah random dari 10 - 50
+            </h2>
+            <hr style="color: white" class="mb-5">
+            <div class="d-flex align-items-center justify-content-around text-center">
+                <div>
+                    <h2>Tree Pattern dengan jumlah baris sebanyak <u class="text-success"><b >{{ " " . $random }}</b></u></h2> 
+                 </div>
+                 <div>
+                     @yield('content')
+                 </div>
+            </div>
+            
+            
         </div>
         @include('foot')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
